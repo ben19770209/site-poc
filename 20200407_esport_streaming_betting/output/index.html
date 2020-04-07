@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl096a7bd8ab479178d2296a9aafeacb99"/>
+<html><head><meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl539d95e9a7de40af491a6fd4900be585"/>
   <meta charset="utf-8">
   <title>20200407_esport_streaming_betting</title>
   <meta name="generator" content="Google Web Designer 8.0.0.0323">
@@ -47,17 +47,22 @@ body {
     border-style: solid;
     border-width: 2px;
     width: 90%;
-    height: 90%;
     left: 5%;
     top: 5%;
     overflow: hidden;
+    height: 80%;
 }
 .gwd-taparea-1fs0 {
     position: absolute;
-    left: 0%;
     top: 0%;
-    width: 100%;
     height: 100%;
+    width: 50%;
+    left: 50%;
+    border-style: solid;
+    background-image: none;
+    background-color: rgb(182, 73, 73);
+    opacity: 0.3;
+    border-width: 0px;
 }
 [data-gwd-group="Group1"] .gwd-grp-1s3v.gwd-button-124y {
     position: absolute;
@@ -110,6 +115,29 @@ body {
     height: 24px;
     left: 132px;
     top: 104px;
+}
+[data-gwd-group="Group2"] .gwd-grp-1r7f.gwd-button-5mkq {
+    position: absolute;
+    width: 100px;
+    height: 24px;
+    left: 315px;
+    top: 0px;
+}
+[data-gwd-group="Group2"] {
+    width: 415px;
+    height: 24px;
+}
+.gwd-div-sbks {
+    position: absolute;
+    left: 81px;
+    top: 34px;
+}
+[data-gwd-group="Group2"] .gwd-grp-1r7f.gwd-select-sg74 {
+    position: absolute;
+    height: 24px;
+    width: 300px;
+    left: 0px;
+    top: 0px;
 }</style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
@@ -143,6 +171,9 @@ body {
     gwd.bet_even = function(event) {
       alert('EVEN');
     };
+    gwd.change_stream = function(event) {
+      document.getElementById("gwd-iframe_1").src = document.getElementById("selectStream").value;
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Google Web Designer 中處理事件的支援程式碼
@@ -161,6 +192,7 @@ body {
       gwd.actions.events.addHandler(' Group1 button_5', 'click', gwd.bet_odd, false);
       gwd.actions.events.addHandler(' Group1 button_6', 'touchend', gwd.bet_even, false);
       gwd.actions.events.addHandler(' Group1 button_6', 'click', gwd.bet_even, false);
+      gwd.actions.events.addHandler(' Group2 btnChangeStream', 'click', gwd.change_stream, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler(' Group1 button_1', 'touchend', gwd.bet_big, false);
@@ -176,6 +208,7 @@ body {
       gwd.actions.events.removeHandler(' Group1 button_5', 'click', gwd.bet_odd, false);
       gwd.actions.events.removeHandler(' Group1 button_6', 'touchend', gwd.bet_even, false);
       gwd.actions.events.removeHandler(' Group1 button_6', 'click', gwd.bet_even, false);
+      gwd.actions.events.removeHandler(' Group2 btnChangeStream', 'click', gwd.change_stream, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -193,6 +226,15 @@ body {
       <button data-gwd-grp-id="button_4" class="gwd-grp-1s3v gwd-button-lujg">LOW</button>
       <button data-gwd-grp-id="button_5" class="gwd-grp-1s3v gwd-button-sezv">ODD</button>
       <button data-gwd-grp-id="button_6" class="gwd-grp-1s3v gwd-button-dki5">EVEN</button>
+    </div>
+  <div class="gwd-div-sbks" data-gwd-group="Group2">
+      <button class="gwd-button-5mkq gwd-grp-1r7f" data-gwd-grp-id="btnChangeStream">change</button>
+      <select data-gwd-grp-id="selectStream" class="gwd-grp-1r7f gwd-select-sg74" data-gwd-name="selectStream" id="selectStream">
+        <option value="https://liveshare.huya.com/iframe/chuhe" selected="">https://liveshare.huya.com/iframe/chuhe</option>
+        <option value="https://www.huomao.com/800531">https://www.huomao.com/800531</option>
+        <option value="https://www.youtube.com/embed/FfimGwd4WVM">https://www.youtube.com/embed/FfimGwd4WVM</option>
+        <option value="https://player.twitch.tv/?channel=xargon0731">https://player.twitch.tv/?channel=xargon0731</option>
+      </select>
     </div>
 
 
