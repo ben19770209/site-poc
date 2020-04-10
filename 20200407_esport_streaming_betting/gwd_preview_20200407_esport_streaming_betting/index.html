@@ -37,7 +37,6 @@ body {
 }
 .gwd-iframe-jzjd {
     position: absolute;
-    padding: 1px;
     margin: 0px;
     border-image-source: none;
     border-image-width: 1;
@@ -46,11 +45,13 @@ body {
     border-color: rgb(25, 11, 11);
     border-style: solid;
     border-width: 2px;
-    width: 90%;
+    width: 100%;
     left: 5%;
     top: 5%;
-    height: 80%;
+    height: 100%;
     overflow: initial;
+    padding: 1px;
+    background: green;
 }
 .gwd-taparea-1fs0 {
     position: absolute;
@@ -228,7 +229,9 @@ body {
 
 <body class="htmlNoPages">
   
-  <gwd-iframe id="gwd-iframe_1" source="https://liveshare.huya.com/iframe/huyacsgo" class="gwd-iframe-jzjd" scrolling="no" allow="autoplay" allowautoplay="true" allowfullscreen="false"></gwd-iframe>
+  <div style="padding-top:56.25%;background-color: yellow;">
+    <gwd-iframe id="gwd-iframe_1" source="https://liveshare.huya.com/iframe/huyacsgo" class="gwd-iframe-jzjd" scrolling="no" allow="autoplay"></gwd-iframe>
+  </div>
   <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-1fs0"></gwd-taparea>
   <div class="gwd-div-dvfn" data-gwd-group="Group1" id="betting_control">
       <button class="gwd-button-124y gwd-grp-1s3v" data-gwd-grp-id="button_1">BIG</button>
@@ -243,9 +246,9 @@ body {
       <select data-gwd-grp-id="selectStream" class="gwd-grp-1r7f gwd-select-sg74" data-gwd-name="selectStream" id="selectStream">
         <option selected="">https://liveshare.huya.com/iframe/chuhe</option>
         <option>https://www.huomao.com/outplayer/index/800531</option>
-        <option value="https://www.youtube.com/embed/FfimGwd4WVM?autoplay=true">https://www.youtube.com/embed/FfimGwd4WVM?autoplay=true</option>
-        <option value="https://player.twitch.tv/?video=v582224254&amp;autoplay=true">https://player.twitch.tv/?video=v582224254&amp;autoplay=true</option>
-        <option value="https://player.twitch.tv/?channel=summit1g&amp;autoplay=true">https://player.twitch.tv/?channel=summit1g&amp;autoplay=true</option>
+        <option>https://www.youtube.com/embed/FfimGwd4WVM?autoplay=true</option>
+        <option>https://player.twitch.tv/?video=v582224254&amp;autoplay=true</option>
+        <option>https://player.twitch.tv/?channel=summit1g&amp;autoplay=true</option>
       </select>
     </div>
 

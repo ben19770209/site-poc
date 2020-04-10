@@ -32,23 +32,6 @@
       transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       transform-style: preserve-3d;
     }
-    .gwd-iframe-jzjd {
-      position: absolute;
-      padding: 1px;
-      margin: 0px;
-      border-image-source: none;
-      border-image-width: 1;
-      border-image-outset: 0;
-      border-image-repeat: stretch;
-      border-color: rgb(25, 11, 11);
-      border-style: solid;
-      border-width: 2px;
-      width: 90%;
-      left: 5%;
-      top: 5%;
-      height: 80%;
-      overflow: initial;
-    }
     .gwd-taparea-1fs0 {
       position: absolute;
       border-style: solid;
@@ -147,6 +130,22 @@
       height: 30px;
       width: 75%;
     }
+    [data-gwd-group="Group3"] .gwd-grp-i0hk.gwd-iframe-jzjd {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    [data-gwd-group="Group3"] {}
+    .gwd-div-1t91 {
+      position: relative;
+      padding-top: 56.25%;
+      background: yellow;
+      left: 5%;
+      width: 90%;
+      top: 6%;
+    }
   </style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
@@ -163,10 +162,10 @@
     gwd.bet_small = function(event) {
       alert('SMALL');
     };
-    gwd.show_hide_betting_control = function(event) {
-      var betting_control = document.getElementById("betting_control");
-      if (betting_control.style.display == 'none') betting_control.style.display = '';
-      else betting_control.style.display = 'none';
+    gwd.show_hide_groupBettingControl = function(event) {
+      var groupBettingControl = document.getElementById("groupBettingControl");
+      if (groupBettingControl.style.display == 'none') groupBettingControl.style.display = '';
+      else groupBettingControl.style.display = 'none';
     };
     gwd.bet_high = function(event) {
       alert('HIGH');
@@ -192,7 +191,7 @@
       gwd.actions.events.addHandler(' Group1 button_1', 'click', gwd.bet_big, false);
       gwd.actions.events.addHandler(' Group1 button_2', 'touchend', gwd.bet_small, false);
       gwd.actions.events.addHandler(' Group1 button_2', 'click', gwd.bet_small, false);
-      gwd.actions.events.addHandler('gwd-taparea_1', 'action', gwd.show_hide_betting_control, false);
+      gwd.actions.events.addHandler('groupTapArea', 'action', gwd.show_hide_groupBettingControl, false);
       gwd.actions.events.addHandler(' Group1 button_3', 'touchend', gwd.bet_high, false);
       gwd.actions.events.addHandler(' Group1 button_3', 'click', gwd.bet_high, false);
       gwd.actions.events.addHandler(' Group1 button_4', 'touchend', gwd.bet_low, false);
@@ -208,7 +207,7 @@
       gwd.actions.events.removeHandler(' Group1 button_1', 'click', gwd.bet_big, false);
       gwd.actions.events.removeHandler(' Group1 button_2', 'touchend', gwd.bet_small, false);
       gwd.actions.events.removeHandler(' Group1 button_2', 'click', gwd.bet_small, false);
-      gwd.actions.events.removeHandler('gwd-taparea_1', 'action', gwd.show_hide_betting_control, false);
+      gwd.actions.events.removeHandler('groupTapArea', 'action', gwd.show_hide_groupBettingControl, false);
       gwd.actions.events.removeHandler(' Group1 button_3', 'touchend', gwd.bet_high, false);
       gwd.actions.events.removeHandler(' Group1 button_3', 'click', gwd.bet_high, false);
       gwd.actions.events.removeHandler(' Group1 button_4', 'touchend', gwd.bet_low, false);
@@ -237,18 +236,21 @@
     <div data-gwd-group-def="Group2" data-gwd-group-class="gwd-grp-1r7f" style="display: none;">
       <button class="gwd-button-5mkq gwd-grp-1r7f" data-gwd-grp-id="btnChangeStream">change</button>
       <select data-gwd-grp-id="selectStream" class="gwd-grp-1r7f gwd-select-sg74" data-gwd-name="selectStream" id="selectStream">
-        <option selected>https://liveshare.huya.com/iframe/chuhe</option>
+        <option selected="">https://liveshare.huya.com/iframe/chuhe</option>
         <option>https://www.huomao.com/outplayer/index/800531</option>
         <option>https://www.youtube.com/embed/FfimGwd4WVM?autoplay=true</option>
         <option>https://player.twitch.tv/?video=v582224254&amp;autoplay=true</option>
         <option>https://player.twitch.tv/?channel=summit1g&amp;autoplay=true</option>
       </select>
     </div>
+    <div data-gwd-group-def="Group3" data-gwd-group-class="gwd-grp-i0hk" style="display: none;">
+      <gwd-iframe source="https://liveshare.huya.com/iframe/huyacsgo" class="gwd-iframe-jzjd gwd-grp-i0hk" scrolling="no" allow="autoplay" allowautoplay="true" allowfullscreen="false" data-gwd-grp-id="gwd-iframe_1"></gwd-iframe>
+    </div>
   </template>
-  <gwd-iframe id="gwd-iframe_1" source="https://liveshare.huya.com/iframe/huyacsgo" class="gwd-iframe-jzjd" scrolling="no" allow="autoplay" allowautoplay="true" allowfullscreen="false"></gwd-iframe>
-  <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-1fs0"></gwd-taparea>
-  <div class="gwd-div-dvfn" data-gwd-group="Group1" id="betting_control"></div>
-  <div class="gwd-div-sbks" data-gwd-group="Group2"></div>
+  <div class="gwd-div-1t91" data-gwd-group="Group3" id="groupIframe"></div>
+  <gwd-taparea id="groupTapArea" class="gwd-taparea-1fs0"></gwd-taparea>
+  <div class="gwd-div-dvfn" data-gwd-group="Group1" id="groupBettingControl"></div>
+  <div class="gwd-div-sbks" data-gwd-group="Group2" id="groupSwitchStreaming"></div>
 </body>
 
 </html>
