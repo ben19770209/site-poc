@@ -1,119 +1,95 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>streaming players</title>
-		<meta name="generator" content="Google Web Designer 8.0.1.0401" />
 
-		<style type="text/css">
-			video {
-				width: 400px;
-				height: 300px;
-			}
-    </style>
-    
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video-js.min.css'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video.min.js'></script>
+<head>
+  <meta charset="utf-8" />
+  <title>streaming players</title>
+  <meta name="generator" content="Google Web Designer 8.0.1.0401" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js"></script>
-	</head>
+  <style type="text/css">
+    video {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
 
-	<body class="htmlNoPages">
-		<h1>
-			<a href="http://liveshare.huya.com/iframe/660007" target="_blank"
-				>http://liveshare.huya.com/iframe/660007</a
-			>
-		</h1>
-		<video id="huya-desktop"></video>
-		<script>
-			if (flvjs.isSupported()) {
-				var videoElement = document.getElementById("huya-desktop");
-				var flvPlayer = flvjs.createPlayer({
-					type: "flv",
-					//url: 'https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=854f45cea1fe34b0edb35291ea0712a8&wsTime=5e951ef9&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243526150&t=100&sv=1910221059',
-					url:
-						"https://aldirect.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=8811fbbe71cbbb20b38da7a868a038bf&wsTime=5e952527&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243244294&t=100&sv=1910221059",
-				});
-				flvPlayer.attachMediaElement(videoElement);
-				flvPlayer.load();
-				flvPlayer.play();
-			}
-		</script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video-js.min.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video.min.js'></script>
 
-		<h1>
-			<a href="https://liveshare.huya.com/m/660007" target="_blank"
-				>https://liveshare.huya.com/m/660007</a
-			>
-		</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js"></script>
+</head>
 
-		<video id="huya-mobile" controls="" autoplay="" name="media">
-			<source
-				src="//aldirect.hls.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1_1200.m3u8?wsSecret=060e24e5d6d3846212481bd318cd07af&wsTime=5e953bfc"
-				type="application/vnd.apple.mpegurl"
-			/>
-		</video>
+<body class="htmlNoPages">
+  <h1>
+    <a href="http://liveshare.huya.com/iframe/660007" target="_blank">http://liveshare.huya.com/iframe/660007</a>
+  </h1>
+  <video id="huya-desktop"></video>
+  <script>
+    if (flvjs.isSupported()) {
+      var videoElement = document.getElementById("huya-desktop");
+      var flvPlayer = flvjs.createPlayer({
+        type: "flv",
+        //url: 'https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=854f45cea1fe34b0edb35291ea0712a8&wsTime=5e951ef9&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243526150&t=100&sv=1910221059',
+        url: "https://aldirect.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=8811fbbe71cbbb20b38da7a868a038bf&wsTime=5e952527&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243244294&t=100&sv=1910221059",
+      });
+      flvPlayer.attachMediaElement(videoElement);
+      flvPlayer.load();
+      flvPlayer.play();
+    }
+  </script>
 
-		<h1>
-			<a href="https://www.huomao.com/1335" target="_blank"
-				>https://www.huomao.com/1335</a
-			>
-		</h1>
-		<video id="huomao-desktop"></video>
-		<script>
-			if (flvjs.isSupported()) {
-				var videoElement = document.getElementById("huomao-desktop");
-				var flvPlayer = flvjs.createPlayer({
-					type: "flv",
-					url:
-						"https://live-jd2-hdl.huomaotv.cn/live/8wFPRW60754_8000p.flv?t=1586831203&r=787156657868&stream=8wFPRW60754&rid=oubvc2y3v&token=ee2b18722b9770798ee4253ffbe54e63&url=http%3A%2F%2Flive-jd2-hdl.huomaotv.cn%2Flive%2F8wFPRW60754_8000p.flv&from=huomaoh5room",
-				});
-				flvPlayer.attachMediaElement(videoElement);
-				flvPlayer.load();
-				flvPlayer.play();
-			}
-		</script>
+  <h1>
+    <a href="https://liveshare.huya.com/m/660007" target="_blank">https://liveshare.huya.com/m/660007</a>
+  </h1>
 
-		<h1>
-			<a
-				href="https://www.huomao.com/mobile/mob_live/8438"
-				target="_blank"
-				>https://www.huomao.com/mobile/mob_live/8438</a
-			>
-		</h1>
-		<video id="huomaotv-mobile" controls="" autoplay="" name="media">
-      <source src="http://live-jd2-hls.huomaotv.cn/live/cnqIPU_720.m3u8?t=1586838798&amp;r=790818362832&amp;stream=cnqIPU&amp;rid=oubvc2y3v&amp;token=e007673a15eb67cbd485ed6b319f36e1&amp;url=http%3A%2F%2Flive-jd2-hls.huomaotv.cn%2Flive%2FcnqIPU_720.m3u8&amp;from=huomaoh5room"
-      type="application/vnd.apple.mpegurl"
-      >
-		</video>
+  <video id="huya-mobile" class="video-js" controls="" autoplay="">
+    <source
+      src="//aldirect.hls.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1_1200.m3u8?wsSecret=060e24e5d6d3846212481bd318cd07af&wsTime=5e953bfc"
+      type="application/vnd.apple.mpegurl" />
+  </video>
 
-		<h1>
-			<a
-				href="https://www.youtube.com/watch?v=J2sRoTCJD0k"
-				target="_blank"
-				>https://www.youtube.com/watch?v=J2sRoTCJD0k</a
-			>
-		</h1>
-		<video
-			tabindex="-1"
-			controlslist="nodownload"
-			src="blob:https://www.youtube.com/515af86d-4a3f-40ba-8fb8-eac037cc4668"
-			id="youtube-desktop"
-		></video>
+  <h1>
+    <a href="https://www.huomao.com/1335" target="_blank">https://www.huomao.com/1335</a>
+  </h1>
+  <video id="huomao-desktop"></video>
+  <script>
+    if (flvjs.isSupported()) {
+      var videoElement = document.getElementById("huomao-desktop");
+      var flvPlayer = flvjs.createPlayer({
+        type: "flv",
+        url: "https://live-jd2-hdl.huomaotv.cn/live/8wFPRW60754_8000p.flv?t=1586831203&r=787156657868&stream=8wFPRW60754&rid=oubvc2y3v&token=ee2b18722b9770798ee4253ffbe54e63&url=http%3A%2F%2Flive-jd2-hdl.huomaotv.cn%2Flive%2F8wFPRW60754_8000p.flv&from=huomaoh5room",
+      });
+      flvPlayer.attachMediaElement(videoElement);
+      flvPlayer.load();
+      flvPlayer.play();
+    }
+  </script>
 
-		<h1>
-			<a href="https://m.youtube.com/watch?v=J2sRoTCJD0k" target="_blank"
-				>https://m.youtube.com/watch?v=J2sRoTCJD0k</a
-			>
-		</h1>
-		<video
-			tabindex="-1"
-			webkit-playsinline=""
-			playsinline=""
-			x-webkit-airplay="allow"
-			title="Demon Slayer EP19「Kamado Tanjiro no Uta」| When Nezuko and Shinobu playing Piano &amp; Violin"
-			controlslist="nodownload"
-			src="https://r4---sn-ipoxu-un5s.googlevideo.com/videoplayback?expire=1586792286&amp;ei=_jKUXpvYKorwqAH-vYKgDA&amp;ip=61.221.35.49&amp;id=o-ANqD0B4cDd_bk3xYYnKM_pkmff3zhcH5wJqCLsHNWlXN&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;mh=xI&amp;mm=31%2C29&amp;mn=sn-ipoxu-un5s%2Csn-un57en7s&amp;ms=au%2Crdu&amp;mv=m&amp;mvi=3&amp;pcm2cms=yes&amp;pl=22&amp;initcwndbps=1023750&amp;vprv=1&amp;mime=video%2Fmp4&amp;gir=yes&amp;clen=29264622&amp;ratebypass=yes&amp;dur=342.331&amp;lmt=1577375719427576&amp;mt=1586770597&amp;fvip=4&amp;fexp=23882513&amp;c=MWEB&amp;txp=5531432&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&amp;lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&amp;lsig=ALrAebAwRgIhAKbDwpYdsMMHPbxKX8Ur_jfGmbqpx-u_6-aDftq4n8XYAiEA57TinMPx7dpxb1d_j8zL2T6IEOv7LwuS6bac6r0hWOk%3D&amp;sig=AJpPlLswRgIhAP0lBu9bhHmbbsoMJZHihLTHKEso9Zt3xNKaGQ83bevLAiEAvu6G5NF85nA8M0-D4hC6jIvQjiSKGIhH_AGLbCnejTY%3D&amp;cpn=mvrlbSxfNVnJRH20&amp;cver=2.20200407.05.00&amp;ptk=youtube_multi&amp;oid=6YNJ_AGtzxPUnYqevARx8Q.9b8naKhAjYHfDP3yKaWKtg&amp;pltype=content"
-			id="youtube-mobile"
-		></video>
-	</body>
+  <h1>
+    <a href="https://www.huomao.com/mobile/mob_live/8438"
+      target="_blank">https://www.huomao.com/mobile/mob_live/8438</a>
+  </h1>
+  <video id="huomaotv-mobile" class="video-js" controls="" autoplay="">
+    <source
+      src="http://live-jd2-hls.huomaotv.cn/live/cnqIPU_720.m3u8?t=1586838798&amp;r=790818362832&amp;stream=cnqIPU&amp;rid=oubvc2y3v&amp;token=e007673a15eb67cbd485ed6b319f36e1&amp;url=http%3A%2F%2Flive-jd2-hls.huomaotv.cn%2Flive%2FcnqIPU_720.m3u8&amp;from=huomaoh5room"
+      type="application/vnd.apple.mpegurl" />
+  </video>
+
+  <h1>
+    <a href="https://www.youtube.com/watch?v=J2sRoTCJD0k"
+      target="_blank">https://www.youtube.com/watch?v=J2sRoTCJD0k</a>
+  </h1>
+  <video tabindex="-1" controlslist="nodownload" src="blob:https://www.youtube.com/515af86d-4a3f-40ba-8fb8-eac037cc4668"
+    id="youtube-desktop"></video>
+
+  <h1>
+    <a href="https://m.youtube.com/watch?v=J2sRoTCJD0k" target="_blank">https://m.youtube.com/watch?v=J2sRoTCJD0k</a>
+  </h1>
+  <video tabindex="-1" webkit-playsinline="" playsinline="" x-webkit-airplay="allow"
+    title="Demon Slayer EP19「Kamado Tanjiro no Uta」| When Nezuko and Shinobu playing Piano &amp; Violin"
+    controlslist="nodownload"
+    src="https://r4---sn-ipoxu-un5s.googlevideo.com/videoplayback?expire=1586792286&amp;ei=_jKUXpvYKorwqAH-vYKgDA&amp;ip=61.221.35.49&amp;id=o-ANqD0B4cDd_bk3xYYnKM_pkmff3zhcH5wJqCLsHNWlXN&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;mh=xI&amp;mm=31%2C29&amp;mn=sn-ipoxu-un5s%2Csn-un57en7s&amp;ms=au%2Crdu&amp;mv=m&amp;mvi=3&amp;pcm2cms=yes&amp;pl=22&amp;initcwndbps=1023750&amp;vprv=1&amp;mime=video%2Fmp4&amp;gir=yes&amp;clen=29264622&amp;ratebypass=yes&amp;dur=342.331&amp;lmt=1577375719427576&amp;mt=1586770597&amp;fvip=4&amp;fexp=23882513&amp;c=MWEB&amp;txp=5531432&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&amp;lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&amp;lsig=ALrAebAwRgIhAKbDwpYdsMMHPbxKX8Ur_jfGmbqpx-u_6-aDftq4n8XYAiEA57TinMPx7dpxb1d_j8zL2T6IEOv7LwuS6bac6r0hWOk%3D&amp;sig=AJpPlLswRgIhAP0lBu9bhHmbbsoMJZHihLTHKEso9Zt3xNKaGQ83bevLAiEAvu6G5NF85nA8M0-D4hC6jIvQjiSKGIhH_AGLbCnejTY%3D&amp;cpn=mvrlbSxfNVnJRH20&amp;cver=2.20200407.05.00&amp;ptk=youtube_multi&amp;oid=6YNJ_AGtzxPUnYqevARx8Q.9b8naKhAjYHfDP3yKaWKtg&amp;pltype=content"
+    id="youtube-mobile"></video>
+</body>
+
 </html>
