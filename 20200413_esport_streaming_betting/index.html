@@ -12,7 +12,7 @@
 			}
     </style>
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js'></script>"
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js'></script>
 	</head>
 
 	<body class="htmlNoPages">
@@ -25,7 +25,8 @@
           var videoElement = document.getElementById('huya-desktop');
           var flvPlayer = flvjs.createPlayer({
               type: 'flv',
-              url: 'https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=854f45cea1fe34b0edb35291ea0712a8&wsTime=5e951ef9&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243526150&t=100&sv=1910221059'
+              //url: 'https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=854f45cea1fe34b0edb35291ea0712a8&wsTime=5e951ef9&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243526150&t=100&sv=1910221059',
+              url: 'https://aldirect.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=8811fbbe71cbbb20b38da7a868a038bf&wsTime=5e952527&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396243244294&t=100&sv=1910221059',
           });
           flvPlayer.attachMediaElement(videoElement);
           flvPlayer.load();
@@ -37,19 +38,13 @@
     
 		<h1>
 			<a href="https://liveshare.huya.com/m/660007" target="_blank">https://liveshare.huya.com/m/660007</a>
-		</h1>
-		<video
-			id="huya-mobile"
-			src="//aldirect.hls.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1_1200.m3u8?wsSecret=2a669331655a52f4f5c2b0c3cc7c22de&amp;wsTime=5e943248"
-			data-setup="{}"
-			webkit-playsinline=""
-			playsinline=""
-			preload="auto"
-			width="100%"
-			height="100%"
-			poster="https://anchorpost.msstatic.com/cdnimage/anchorpost/1060/49/4fbd40d260f4f76e462ef00566adfb_0_1586754928.jpg?imageview/4/0/w/870/h/448/blur/1"
-			autoplay="autoplay"
-    ></video>
+    </h1>
+
+    <video id="huya-mobile" controls="" autoplay="" name="media">
+      <source src="https://aldirect.hls.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1_1200.m3u8?wsSecret=0df19b9cd042d86452b3630d62652a49&amp;wsTime=5e9539ee"
+      type="application/vnd.apple.mpegurl">
+      </video>
+
     
 		<h1>
 			<a href="https://www.huomao.com/1335" target="_blank">https://www.huomao.com/1335</a>
@@ -71,22 +66,11 @@
     
 		<h1>
 			<a href="https://www.huomao.com/mobile/mob_live/1335" target="_blank">https://www.huomao.com/mobile/mob_live/1335</a>
-		</h1>
-		<video
-			poster="https://livepic.huomao.com/1335/i_10.jpg?1586770500"
-			width="100%"
-			webkit-playsinline=""
-			playsinline="true"
-			x5-playsinline=""
-			x-webkit-airplay="true"
-			id="huomao-mobile"
-			controls=""
-			name="media"
-		>
-			<source
-				src="http://live-jd2-hls.huomaotv.cn/live/37ckGI_720.m3u8?t=1586770610&amp;r=63225861417&amp;stream=37ckGI&amp;rid=oubvc2y3v&amp;token=678f6f9c05077b4a25a8cb0737803d5c&amp;url=http%3A%2F%2Flive-jd2-hls.huomaotv.cn%2Flive%2F37ckGI_720.m3u8&amp;from=huomaoh5room"
-			/>
-    </video>
+    </h1>
+    <video id="huomaotv-mobile" controls="" autoplay="" name="media">
+      <source src="http://live-jd2-hls.huomaotv.cn/live/37ckGI_720.m3u8?t=1586770610&amp;r=63225861417&amp;stream=37ckGI&amp;rid=oubvc2y3v&amp;token=678f6f9c05077b4a25a8cb0737803d5c&amp;url=http%3A%2F%2Flive-jd2-hls.huomaotv.cn%2Flive%2F37ckGI_720.m3u8&amp;from=huomaoh5room"
+      type="application/vnd.apple.mpegurl">
+      </video>
 
 
     
