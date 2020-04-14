@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>streaming players</title>
+  
+  <style type="text/css">
+    video {
+      width: 400px;
+      height: 300px;
+    }
+    iframe {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video-js.min.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.0/video.min.js'></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js"></script>
+
+  <script>
+    function isMobileDevice() {
+      var mobileDevice = ['Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'Windows Phone'];
+      var isMobileDevice = false;
+      for (var i = 0; i < mobileDevice.length; i++) {
+        if (navigator.userAgent.match(mobileDevice[i])) {
+          isMobileDevice = true;
+        }
+      }
+      return isMobileDevice;
+    }
+
+  </script>
+</head>
+
+<body>
+
+
+  <div id="device-desktop">
+
+
+    <div id="huomao-desktop">
+      <h1>
+        <a href="https://www.huomao.com/1335" target="_blank">https://www.huomao.com/1335</a>
+      </h1>
+      <video id="vid-huomao-desktop"></video>
+      <script>
+        if (flvjs.isSupported()) {
+          var videoElement = document.getElementById("vid-huomao-desktop");
+          var flvPlayer = flvjs.createPlayer({
+            type: "flv",
+            url: "https://live-jd2-hdl.huomaotv.cn/live/37ckGI_8000p.flv?t=1586857305&r=148467988074&stream=37ckGI&rid=oubvc2y3v&token=361063c610f3fe970b2ae16ba9ba630d&url=http%3A%2F%2Flive-jd2-hdl.huomaotv.cn%2Flive%2F37ckGI_8000p.flv&from=huomaoh5room",
+          });
+          flvPlayer.attachMediaElement(videoElement);
+          flvPlayer.load();
+          flvPlayer.play();
+        }
+      </script>
+    </div>
+
+  </div>
+
+
+
+  <div id="device-mobile">
+
+
+
+    <div id="huomao-mobile">
+      <h1>
+        <a href="https://www.huomao.com/mobile/mob_live/8438"
+          target="_blank">https://www.huomao.com/mobile/mob_live/8438</a>
+      </h1>
+      <video id="vid-huomao-mobile" class="video-js" controls="" autoplay="" data-setup="{}">
+        <source
+          src="https://live-tx-hls.huomaotv.cn/live/37ckGI_720.m3u8?t=1586857385&r=499898106899&stream=37ckGI&rid=oubvc2y3v&token=32e3df0ee3d60965967b80a08ebe5b05&url=http%3A%2F%2Flive-tx-hls.huomaotv.cn%2Flive%2F37ckGI_720.m3u8&from=huomaoh5room"
+          type="application/vnd.apple.mpegurl" />
+      </video>
+    </div>
+
+
+  </div>
+
+  <script>
+    if (isMobileDevice()) {
+      document.getElementById("device-desktop").style.display = "none";
+      document.getElementById("device-mobile").style.display = "";
+    } else {
+      document.getElementById("device-desktop").style.display = "";
+      document.getElementById("device-mobile").style.display = "none";
+    }
+
+  </script>
+
+</body>
+
+</html>
