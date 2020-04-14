@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>streaming players</title>
-  <meta name="generator" content="Google Web Designer 8.0.1.0401" />
-
+  
   <style type="text/css">
     video {
       width: 400px;
@@ -45,7 +44,7 @@
   </script>
 </head>
 
-<body class="htmlNoPages">
+<body>
 
   <button onclick="switchSource('huya')">huya</button>
   <button onclick="switchSource('huomao')">huomao</button>
@@ -63,7 +62,6 @@
           var videoElement = document.getElementById("vid-huya-desktop");
           var flvPlayer = flvjs.createPlayer({
             type: "flv",
-            //url: "https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=365a9aca149f0e7ffeaae9d24a4779d2&wsTime=5e955824&fm=RFdxOEJjSjNoNkRKdDZUWV8kMF8kMV8kMl8kMw%3D%3D&&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&sphdDC=huya&sphd=264_*&fs=gctex&ratio=2500&u=396240123142&t=100&sv=1910221059",
             url: "https://tx.flv.huya.com/src/78941969-2703453392-11611243904900268032-3120368204-10057-A-0-1.flv?wsSecret=365a9aca149f0e7ffeaae9d24a4779d2&wsTime=5e955824",
           });
           flvPlayer.attachMediaElement(videoElement);
@@ -72,7 +70,6 @@
         }
       </script>
     </div>
-
 
     <div id="huomao-desktop">
       <h1>
