@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
   <title>20200407_esport_streaming_betting</title>
   <link href="gwdiframe_style.css" rel="stylesheet" data-version="6" data-exports-type="gwd-iframe">
   <link href="gwdtaparea_style.css" rel="stylesheet" data-version="7" data-exports-type="gwd-taparea">
@@ -139,14 +141,20 @@
       var groupBettingControl = document.getElementById("groupBettingControl");
       if (groupBettingControl.style.display == 'none') groupBettingControl.style.display = '';
       else groupBettingControl.style.display = 'none';
+
+      event.preventDefault()
     };
 
     function doChangeStream() {
       document.getElementById("iframe1").src = document.getElementById("selectStream").value;
+
+      event.preventDefault()
     };
 
     function doBetType(bt) {
       alert(bt);
+
+      event.preventDefault()
     }
 
     function doFullscreen() {
@@ -167,6 +175,8 @@
         document.exitFullscreen();
 
       }
+
+      event.preventDefault()
     }
   </script>
 
