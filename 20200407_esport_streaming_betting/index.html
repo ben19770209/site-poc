@@ -245,24 +245,57 @@
           elem.webkitRequestFullscreen();
         }
 
+
         document.getElementById("groupTapArea").className += " fc";
         document.getElementById("groupBettingControl").className += " fc";
 
         let btns = document.getElementsByClassName("btn_bettype");
-        for(let i=0; i<btns.length; i++) {
+        for (let i = 0; i < btns.length; i++) {
           btns[i].className += " fc";
           console.log(btns.className);
         }
 
 
+        try {
+          screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen
+            .msLockOrientation;
+
+          if (screen.lockOrientationUniversal("landscape-primary")) {
+            // Orientation was locked
+          } else {
+            // Orientation lock failed
+          }
+        } catch {
+
+        }
+
+
       } else {
+
+        try {
+          var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen
+            .msUnlockOrientation ||
+            (screen.orientation && screen.orientation.unlock);
+
+          if (unlockOrientation()) {
+            // orientation was unlocked
+          } else {
+            // orientation unlock failed
+          }
+        } catch {
+
+        }
+        
+
         document.exitFullscreen();
 
-        document.getElementById("groupTapArea").className = document.getElementById("groupTapArea").className.replace(" fc", "");
-        document.getElementById("groupBettingControl").className = document.getElementById("groupBettingControl").className.replace(" fc", "");
+        document.getElementById("groupTapArea").className = document.getElementById("groupTapArea").className.replace(
+          " fc", "");
+        document.getElementById("groupBettingControl").className = document.getElementById("groupBettingControl")
+          .className.replace(" fc", "");
 
         let btns = document.getElementsByClassName("btn_bettype");
-        for(let i=0; i<btns.length; i++) {
+        for (let i = 0; i < btns.length; i++) {
           btns[i].className = btns[i].className.replace(" fc", "");
         }
       }
@@ -293,8 +326,7 @@
     <div id="groupBettingControl" class="">
 
       <button class="btn_bettype btn_big " onclick="doBetType('big')" ontouchend="doBetType('big')">BIG</button>
-      <button class="btn_bettype btn_small " onclick="doBetType('small')"
-        ontouchend="doBetType('small')">SMALL</button>
+      <button class="btn_bettype btn_small " onclick="doBetType('small')" ontouchend="doBetType('small')">SMALL</button>
       <button class="btn_bettype btn_high " onclick="doBetType('high')" ontouchend="doBetType('high')">HIGH</button>
       <button class="btn_bettype btn_low " onclick="doBetType('low')" ontouchend="doBetType('low')">LOW</button>
       <button class="btn_bettype btn_odd " onclick="doBetType('odd')" ontouchend="doBetType('odd')">ODD</button>
