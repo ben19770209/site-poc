@@ -246,9 +246,9 @@
         document.exitFullscreen();
 
         document.getElementById("groupTapArea").className = document.getElementById("groupTapArea").className.replace(
-          " fc", "");
+          / fc/, "");
         document.getElementById("groupBettingControl").className = document.getElementById("groupBettingControl")
-          .className.replace(" fc", "");
+          .className.replace(/ fc/, "");
 
         let btns = document.getElementsByClassName("btn_bettype");
         for (let i = 0; i < btns.length; i++) {
