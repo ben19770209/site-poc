@@ -23,6 +23,32 @@
       top: 85%;
     }
 
+    #groupTapArea {
+      position: absolute;
+      border-style: solid;
+      background-image: none;
+      background-color: rgb(182, 73, 73);
+      opacity: 0.3;
+      border-width: 0px;
+      width: 100%;
+      left: 0%;
+      height: 15%;
+      top: 85%;
+    }
+
+    #groupTapArea.fc {
+      position: absolute;
+      border-style: solid;
+      background-image: none;
+      background-color: rgb(73, 182, 100);
+      opacity: 0.3;
+      border-width: 0px;
+      width: 15%;
+      left: 85%;
+      height: 100%;
+      top: 0%;
+    }
+
 
     .btn_bettype {
       font-size: 20px;
@@ -63,6 +89,44 @@
 
 
 
+    .btn_bettype.fc {
+      font-size: 10px;
+      position: absolute;
+      width: 90%;
+      height: 9%;
+      left: 5%;
+    }
+
+    .btn_bettype.btn_big.fc {
+      top: 10%;
+    }
+
+    .btn_bettype.btn_small.fc {
+      top: 20%;
+    }
+
+    .btn_bettype.btn_high.fc {
+      top: 30%;
+    }
+
+    .btn_bettype.btn_low.fc {
+      top: 40%;
+    }
+
+    .btn_bettype.btn_odd.fc {
+      top: 50%;
+    }
+
+    .btn_bettype.btn_even.fc {
+      top: 60%;
+    }
+
+
+
+
+
+
+
     #groupBettingControl {
       width: 340px;
       height: 54px;
@@ -73,6 +137,16 @@
       width: 90%;
       height: 15%;
       top: 85%;
+    }
+
+    #groupBettingControl.fc {
+      background-color: rgb(14, 101, 141);
+      position: absolute;
+      visibility: visible;
+      left: 85%;
+      width: 15%;
+      height: 90%;
+      top: 5%;
     }
 
 
@@ -124,8 +198,8 @@
     #btnFullscreen {
       font-size: 20px;
       position: absolute;
-      bottom: 5px;
-      right: 5px;
+      top: 5%;
+      left: 5px;
       width: 100px;
       height: 50px;
     }
@@ -171,10 +245,28 @@
           elem.webkitRequestFullscreen();
         }
 
+        document.getElementById("groupTapArea").className += " fc";
+        document.getElementById("groupBettingControl").className += " fc";
+
+        let btns = document.getElementsByClassName("btn_bettype");
+        for(let i=0; i<btns.length; i++) {
+          btns[i].className += " fc";
+          console.log(btns.className);
+        }
+
+
       } else {
         document.exitFullscreen();
 
+        document.getElementById("groupTapArea").className = document.getElementById("groupTapArea").className.replace(" fc", "");
+        document.getElementById("groupBettingControl").className = document.getElementById("groupBettingControl").className.replace(" fc", "");
+
+        let btns = document.getElementsByClassName("btn_bettype");
+        for(let i=0; i<btns.length; i++) {
+          btns[i].className = btns[i].className.replace(" fc", "");
+        }
       }
+
 
       event.preventDefault()
     }
@@ -186,27 +278,27 @@
 
   <div id="divFullscreen">
 
+
     <div id="groupIframe">
 
       <iframe id="iframe1" src="https://liveshare.huya.com/iframe/huyacsgo?autoplay=true" scrolling="no"
         allow="autoplay" allowautoplay="true" allowfullscreen="false"></iframe>
 
-        <button id="btnFullscreen" onclick="doFullscreen()" ontouchend="doFullscreen()">fullscreen</button>
-
-
     </div>
 
-    <gwd-taparea id="groupTapArea" onclick="doShowHideBettingControl()" ontouchend="doShowHideBettingControl()">
+    <gwd-taparea id="groupTapArea" class="" onclick="doShowHideBettingControl()"
+      ontouchend="doShowHideBettingControl()">
     </gwd-taparea>
 
-    <div id="groupBettingControl">
+    <div id="groupBettingControl" class="">
 
-      <button class="btn_bettype btn_big" onclick="doBetType('big')" ontouchend="doBetType('big')">BIG</button>
-      <button class="btn_bettype btn_small" onclick="doBetType('small')" ontouchend="doBetType('small')">SMALL</button>
-      <button class="btn_bettype btn_high" onclick="doBetType('high')" ontouchend="doBetType('high')">HIGH</button>
-      <button class="btn_bettype btn_low" onclick="doBetType('low')" ontouchend="doBetType('low')">LOW</button>
-      <button class="btn_bettype btn_odd" onclick="doBetType('odd')" ontouchend="doBetType('odd')">ODD</button>
-      <button class="btn_bettype btn_even" onclick="doBetType('even')" ontouchend="doBetType('even')">EVEN</button>
+      <button class="btn_bettype btn_big " onclick="doBetType('big')" ontouchend="doBetType('big')">BIG</button>
+      <button class="btn_bettype btn_small " onclick="doBetType('small')"
+        ontouchend="doBetType('small')">SMALL</button>
+      <button class="btn_bettype btn_high " onclick="doBetType('high')" ontouchend="doBetType('high')">HIGH</button>
+      <button class="btn_bettype btn_low " onclick="doBetType('low')" ontouchend="doBetType('low')">LOW</button>
+      <button class="btn_bettype btn_odd " onclick="doBetType('odd')" ontouchend="doBetType('odd')">ODD</button>
+      <button class="btn_bettype btn_even " onclick="doBetType('even')" ontouchend="doBetType('even')">EVEN</button>
 
     </div>
 
@@ -227,20 +319,22 @@
 
     </div>
 
+    <button id="btnFullscreen" onclick="doFullscreen()" ontouchend="doFullscreen()">fullscreen</button>
+
   </div>
 
-<div>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-  <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
-</div>
+  <div>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+    <p>Hello World!! Hello World!! Hello World!! Hello World!! Hello World!!</p>
+  </div>
 
 </body>
 
