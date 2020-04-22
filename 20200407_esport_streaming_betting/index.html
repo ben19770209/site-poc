@@ -23,24 +23,11 @@
       top: 85%;
     }
 
-    #groupTapArea {
-      position: absolute;
-      border-style: solid;
-      background-image: none;
-      background-color: rgb(182, 73, 73);
-      opacity: 0.3;
-      border-width: 0px;
-      width: 100%;
-      left: 0%;
-      height: 15%;
-      top: 85%;
-    }
-
     #groupTapArea.fc {
       position: absolute;
       border-style: solid;
       background-image: none;
-      background-color: rgb(73, 182, 100);
+      background-color: rgb(238, 169, 203);
       opacity: 0.3;
       border-width: 0px;
       width: 15%;
@@ -128,24 +115,22 @@
 
 
     #groupBettingControl {
-      width: 340px;
-      height: 54px;
-
+      background-color: rgb(14, 101, 141);
       position: absolute;
       visibility: visible;
       left: 5%;
-      width: 90%;
+      width: 80%;
       height: 15%;
       top: 85%;
     }
 
     #groupBettingControl.fc {
-      background-color: rgb(14, 101, 141);
+      background-color: rgb(119, 201, 240);
       position: absolute;
       visibility: visible;
       left: 85%;
       width: 15%;
-      height: 90%;
+      height: 60%;
       top: 5%;
     }
 
@@ -256,36 +241,7 @@
         }
 
 
-        try {
-          screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen
-            .msLockOrientation;
-
-          if (screen.lockOrientationUniversal("landscape-primary")) {
-            // Orientation was locked
-          } else {
-            // Orientation lock failed
-          }
-        } catch {
-
-        }
-
-
       } else {
-
-        try {
-          var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen
-            .msUnlockOrientation ||
-            (screen.orientation && screen.orientation.unlock);
-
-          if (unlockOrientation()) {
-            // orientation was unlocked
-          } else {
-            // orientation unlock failed
-          }
-        } catch {
-
-        }
-        
 
         document.exitFullscreen();
 
